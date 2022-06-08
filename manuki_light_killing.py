@@ -159,16 +159,3 @@ if __name__ == '__main__':
                         (0, 255, 0), 2)
 
         #image =   cv2.resize(image, (720,720))
-
-        if(frm==0):
-            out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 30, (image.shape[1],image.shape[0]))
-            print("Initializing")
-            frm+=1
-        cv2.imshow('tf-pose-estimation result', image)
-        if i != 0:
-            out.write(image)
-        fps_time = time.time()
-        if cv2.waitKey(1) == 27:
-            break
-
-    cv2.destroyAllWindows()
